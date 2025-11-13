@@ -1,0 +1,624 @@
+/* ========================================
+   VARIÁVEIS CSS - Design System
+   ======================================== */
+:root {
+    /* Cores Light Mode */
+    --color-bg: hsl(220, 25%, 98%);
+    --color-text: hsl(220, 20%, 15%);
+    --color-primary: hsl(6, 78%, 65%);
+    --color-secondary: hsl(174, 62%, 59%);
+    --color-card: hsl(0, 0%, 100%);
+    --color-muted: hsl(220, 20%, 95%);
+    --color-border: hsl(220, 20%, 90%);
+    
+    /* Sombras */
+    --shadow-card: 0 8px 24px -8px hsla(220, 20%, 15%, 0.12);
+    --shadow-card-hover: 0 12px 32px -8px hsla(220, 20%, 15%, 0.18);
+    --shadow-btn: 0 4px 12px -4px hsla(0, 0%, 0%, 0.15);
+    
+    /* Gradientes */
+    --gradient-hero: linear-gradient(135deg, 
+        hsla(6, 78%, 65%, 0.9), 
+        hsla(174, 62%, 59%, 0.9));
+    
+    /* Tipografia */
+    --font-primary: 'Poppins', sans-serif;
+    
+    /* Espaçamentos */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+    --spacing-xl: 6rem;
+    
+    /* Border Radius */
+    --radius: 12px;
+    
+    /* Transições */
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Dark Mode */
+body.dark-mode {
+    --color-bg: hsl(220, 30%, 8%);
+    --color-text: hsl(220, 20%, 95%);
+    --color-card: hsl(220, 25%, 12%);
+    --color-muted: hsl(220, 25%, 18%);
+    --color-border: hsl(220, 25%, 20%);
+    --shadow-card: 0 8px 24px -8px hsla(0, 0%, 0%, 0.3);
+    --shadow-card-hover: 0 12px 32px -8px hsla(0, 0%, 0%, 0.4);
+}
+
+/* ========================================
+   RESET E BASE
+   ======================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+    transition: var(--transition);
+}
+
+/* ========================================
+   TIPOGRAFIA
+   ======================================== */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* ========================================
+   CONTAINER E LAYOUT
+   ======================================== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+.section {
+    padding: var(--spacing-xl) 0;
+}
+
+.section-alt {
+    background-color: var(--color-muted);
+}
+
+.section-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    text-align: center;
+    margin-bottom: var(--spacing-sm);
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.125rem;
+    color: var(--color-text);
+    opacity: 0.7;
+    max-width: 600px;
+    margin: 0 auto var(--spacing-lg);
+}
+
+/* ========================================
+   BOTÕES
+   ======================================== */
+.btn {
+    display: inline-block;
+    padding: 0.875rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: var(--radius);
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: white;
+    box-shadow: var(--shadow-btn);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px -4px hsla(0, 0%, 0%, 0.25);
+}
+
+.btn-secondary {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.btn-lg {
+    padding: 1.125rem 2.5rem;
+    font-size: 1.125rem;
+}
+
+/* ========================================
+   THEME TOGGLE
+   ======================================== */
+.theme-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1000;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--color-border);
+    background-color: var(--color-card);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    box-shadow: var(--shadow-card);
+    transition: var(--transition);
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+.dark-mode .icon-light {
+    display: none;
+}
+
+.icon-dark {
+    display: none;
+}
+
+.dark-mode .icon-dark {
+    display: inline;
+}
+
+/* ========================================
+   HERO SECTION
+   ======================================== */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gradient-hero);
+    text-align: center;
+    padding: var(--spacing-lg) var(--spacing-md);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-title {
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    color: white;
+    margin-bottom: var(--spacing-md);
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.hero-description {
+    font-size: clamp(1.125rem, 3vw, 1.5rem);
+    color: rgba(255, 255, 255, 0.95);
+    max-width: 700px;
+    margin: 0 auto var(--spacing-lg);
+    line-height: 1.8;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: var(--spacing-sm);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ========================================
+   SOBRE SECTION
+   ======================================== */
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.125rem;
+    line-height: 1.8;
+}
+
+.quote {
+    font-style: italic;
+    opacity: 0.8;
+    border-left: 4px solid var(--color-primary);
+    padding-left: var(--spacing-sm);
+    margin-top: var(--spacing-md);
+}
+
+/* ========================================
+   FILTROS DE MISSÕES
+   ======================================== */
+.filters {
+    display: flex;
+    gap: var(--spacing-xs);
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: var(--spacing-lg);
+}
+
+.filter-btn {
+    padding: 0.75rem 1.5rem;
+    border: 2px solid var(--color-border);
+    background-color: transparent;
+    color: var(--color-text);
+    border-radius: var(--radius);
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background-color: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+}
+
+/* ========================================
+   CARDS DE MISSÕES
+   ======================================== */
+.missions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.mission-card {
+    background-color: var(--color-card);
+    border-radius: var(--radius);
+    padding: var(--spacing-md);
+    box-shadow: var(--shadow-card);
+    transition: var(--transition);
+}
+
+.mission-card:hover {
+    box-shadow: var(--shadow-card-hover);
+    transform: translateY(-4px);
+}
+
+.mission-card.hidden {
+    display: none;
+}
+
+.mission-badge {
+    display: inline-block;
+    padding: 0.375rem 0.875rem;
+    background-color: var(--color-secondary);
+    color: white;
+    border-radius: 100px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+}
+
+.mission-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.mission-card p {
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.7;
+}
+
+.mission-learnings {
+    background-color: var(--color-muted);
+    padding: var(--spacing-sm);
+    border-radius: var(--radius);
+    margin-top: var(--spacing-sm);
+    display: none;
+}
+
+.mission-learnings.show {
+    display: block;
+}
+
+.mission-learnings h4 {
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+}
+
+.toggle-btn {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: transparent;
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius);
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.toggle-btn:hover {
+    background-color: var(--color-muted);
+}
+
+/* ========================================
+   TIMELINE
+   ======================================== */
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 2rem;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, 
+        var(--color-primary), 
+        var(--color-secondary), 
+        var(--color-primary));
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: var(--spacing-lg);
+    padding-left: 5rem;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 1.5rem;
+    top: 0;
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--color-primary);
+    border: 4px solid var(--color-bg);
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px var(--color-primary);
+}
+
+.timeline-badge {
+    display: inline-block;
+    padding: 0.375rem 0.875rem;
+    background-color: transparent;
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+    border-radius: 100px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-xs);
+}
+
+.timeline-card {
+    background-color: var(--color-card);
+    padding: var(--spacing-md);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-card);
+}
+
+.timeline-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+/* ========================================
+   COMPETÊNCIAS
+   ======================================== */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.skill-card {
+    background-color: var(--color-card);
+    padding: var(--spacing-md);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-card);
+}
+
+.skill-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tag {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: var(--color-secondary);
+    color: white;
+    border-radius: 100px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.tag-outline {
+    background-color: transparent;
+    border: 2px solid var(--color-border);
+    color: var(--color-text);
+}
+
+.tag-primary {
+    background-color: var(--color-primary);
+}
+
+/* ========================================
+   REFLEXÕES
+   ======================================== */
+.reflections-grid {
+    display: grid;
+    gap: var(--spacing-md);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: var(--color-card);
+    padding: var(--spacing-md);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-card);
+}
+
+.card h3 {
+    font-size: 1.75rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.card-content {
+    font-size: 1.125rem;
+    line-height: 1.8;
+}
+
+.card-highlight {
+    border: 2px solid var(--color-primary);
+}
+
+.highlight-text {
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+/* ========================================
+   CTA SECTION
+   ======================================== */
+.cta-section {
+    background: var(--gradient-hero);
+    padding: var(--spacing-xl) var(--spacing-md);
+    text-align: center;
+    color: white;
+}
+
+.cta-section h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: var(--spacing-sm);
+}
+
+.cta-section p {
+    font-size: 1.25rem;
+    max-width: 700px;
+    margin: 0 auto var(--spacing-md);
+    line-height: 1.8;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: var(--spacing-sm);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+footer {
+    padding: var(--spacing-md);
+    text-align: center;
+    border-top: 1px solid var(--color-border);
+    opacity: 0.7;
+}
+
+/* ========================================
+   SCROLL TO TOP
+   ======================================== */
+.scroll-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: var(--shadow-card);
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+    z-index: 999;
+}
+
+.scroll-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-top:hover {
+    transform: translateY(-4px);
+}
+
+/* ========================================
+   RESPONSIVIDADE
+   ======================================== */
+@media (max-width: 768px) {
+    .hero-buttons,
+    .cta-buttons {
+        flex-direction: column;
+    }
+    
+    .timeline::before {
+        left: 1rem;
+    }
+    
+    .timeline-item {
+        padding-left: 3.5rem;
+    }
+    
+    .timeline-item::before {
+        left: 0.5rem;
+    }
+    
+    .missions-grid,
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+    
+    html {
+        scroll-behavior: auto;
+    }
+}
