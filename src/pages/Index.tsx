@@ -531,6 +531,7 @@ const Index = () => {
             <Button 
               size="lg"
               className="bg-white text-primary hover:bg-white/90 shadow-xl text-lg px-8"
+              onClick={() => window.location.href = 'mailto:silva.rafagomes05@gmail.com'}
             >
               Entre em Contato
             </Button>
