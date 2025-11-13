@@ -527,14 +527,10 @@ const Index = () => {
             Se você quer saber mais sobre minha jornada, trocar ideias sobre programação, 
             ou apenas bater um papo sobre tecnologia, eu adoraria conversar com você!
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              size="lg"
-              className="bg-white text-primary hover:bg-white/90 shadow-xl text-lg px-8"
-              onClick={() => window.location.href = 'mailto:silva.rafagomes05@gmail.com'}
-            >
-              Entre em Contato
-            </Button>
+          <div className="flex flex-col gap-4 items-center">
+            <p className="text-2xl font-semibold text-white">
+              silva.rafagomes05@gmail.com
+            </p>
             <Button 
               size="lg" 
               variant="outline"
