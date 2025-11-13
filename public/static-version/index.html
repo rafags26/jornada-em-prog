@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Jornada em Programação e Plataformas</title>
+    <meta name="description" content="Portfólio pessoal da disciplina Programação e Plataformas - Uma jornada de aprendizado e transformação">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Botão de alternar tema -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">
+        <span class="icon-light">🌙</span>
+        <span class="icon-dark">☀️</span>
+    </button>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="container">
+            <h1 class="hero-title">Minha Jornada em<br>Programação e Plataformas</h1>
+            <p class="hero-description">
+                Este é o registro da minha transformação: de iniciante insegura a desenvolvedora confiante. 
+                Aqui você vai encontrar minhas missões, desafios superados e tudo que aprendi ao longo dessa jornada incrível.
+            </p>
+            <div class="hero-buttons">
+                <a href="#missions" class="btn btn-primary">Ver Minhas Missões</a>
+                <a href="#reflections" class="btn btn-secondary">Minhas Reflexões</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">Sobre Este Portfólio</h2>
+            <div class="about-content">
+                <p>
+                    A disciplina de <strong>Programação e Plataformas</strong> foi muito mais do que aprender 
+                    HTML, CSS e JavaScript. Foi uma jornada de autodescoberta, onde aprendi que sou capaz de 
+                    criar soluções tecnológicas, resolver problemas complexos e transformar ideias em realidade através do código.
+                </p>
+                <p>
+                    No começo do semestre, eu mal sabia o que era uma tag HTML. Olhava para códigos e parecia 
+                    tudo muito complicado e distante. Tinha medo de errar, de não conseguir acompanhar. 
+                    Mas algo dentro de mim dizia para insistir, e foi a melhor decisão que tomei.
+                </p>
+                <p>Neste portfólio, você vai encontrar:</p>
+                <ul>
+                    <li><strong>Minhas missões mais significativas:</strong> projetos que marcaram minha evolução</li>
+                    <li><strong>Linha do tempo:</strong> como fui me transformando ao longo do semestre</li>
+                    <li><strong>Competências desenvolvidas:</strong> técnicas, pessoais e ferramentas que domino</li>
+                    <li><strong>Reflexões finais:</strong> aprendizados sobre mim mesma e sobre tecnologia</li>
+                </ul>
+                <p class="quote">
+                    Cada linha de código aqui representa horas de estudo, tentativa e erro, frustrações superadas 
+                    e pequenas vitórias celebradas. Este é o meu registro de crescimento.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Missões Section -->
+    <section id="missions" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Minhas Missões Mais Significativas</h2>
+            <p class="section-subtitle">
+                Cada projeto foi um degrau importante na minha evolução. Aqui estão os que mais me marcaram:
+            </p>
+
+            <!-- Filtros -->
+            <div class="filters">
+                <button class="filter-btn active" data-category="all">Todas as Missões</button>
+                <button class="filter-btn" data-category="frontend">Front-end</button>
+                <button class="filter-btn" data-category="logica">Lógica/JavaScript</button>
+                <button class="filter-btn" data-category="projeto">Projeto Final</button>
+            </div>
+
+            <!-- Cards de Missões (serão preenchidos via JavaScript) -->
+            <div id="missions-container" class="missions-grid"></div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="timeline" class="section">
+        <div class="container">
+            <h2 class="section-title">Linha do Tempo da Minha Evolução</h2>
+            <p class="section-subtitle">Como eu fui me transformando ao longo do semestre:</p>
+            
+            <!-- Timeline (será preenchida via JavaScript) -->
+            <div id="timeline-container" class="timeline"></div>
+        </div>
+    </section>
+
+    <!-- Competências Section -->
+    <section id="skills" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Competências Desenvolvidas</h2>
+            <p class="section-subtitle">Tudo que construí durante essa jornada:</p>
+
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Competências Técnicas</h3>
+                    <div class="tags">
+                        <span class="tag">HTML5</span>
+                        <span class="tag">CSS3</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Flexbox</span>
+                        <span class="tag">Grid</span>
+                        <span class="tag">Responsividade</span>
+                        <span class="tag">Git & GitHub</span>
+                        <span class="tag">APIs</span>
+                        <span class="tag">LocalStorage</span>
+                        <span class="tag">DOM Manipulation</span>
+                        <span class="tag">Debugging</span>
+                        <span class="tag">VS Code</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Competências Pessoais</h3>
+                    <div class="tags">
+                        <span class="tag tag-outline">Autonomia</span>
+                        <span class="tag tag-outline">Resiliência</span>
+                        <span class="tag tag-outline">Resolução de Problemas</span>
+                        <span class="tag tag-outline">Pensamento Lógico</span>
+                        <span class="tag tag-outline">Autoconfiança</span>
+                        <span class="tag tag-outline">Trabalho em Equipe</span>
+                        <span class="tag tag-outline">Gestão do Tempo</span>
+                        <span class="tag tag-outline">Busca por Soluções</span>
+                        <span class="tag tag-outline">Criatividade</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Ferramentas & Plataformas</h3>
+                    <div class="tags">
+                        <span class="tag tag-primary">Lovable</span>
+                        <span class="tag tag-primary">VS Code</span>
+                        <span class="tag tag-primary">GitHub</span>
+                        <span class="tag tag-primary">Figma</span>
+                        <span class="tag tag-primary">Chrome DevTools</span>
+                        <span class="tag tag-primary">Stack Overflow</span>
+                        <span class="tag tag-primary">MDN Docs</span>
+                        <span class="tag tag-primary">CodePen</span>
+                        <span class="tag tag-primary">Vercel</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reflexões Section -->
+    <section id="reflections" class="section">
+        <div class="container">
+            <h2 class="section-title">Reflexões Finais</h2>
+            <p class="section-subtitle">O que essa jornada me ensinou:</p>
+
+            <div class="reflections-grid">
+                <div class="card">
+                    <h3>Sobre Mim Mesma</h3>
+                    <div class="card-content">
+                        <p>
+                            Descobri que sou muito mais capaz do que imaginava. No início, achava que programação 
+                            era algo para "gênios" ou pessoas com um "dom especial". Hoje sei que é sobre persistência, 
+                            curiosidade e vontade de aprender.
+                        </p>
+                        <p>
+                            Aprendi que erro não é fracasso - é parte do processo. Cada bug que resolvi me tornou 
+                            mais forte. Cada "Uncaught TypeError" que debugei aumentou minha confiança.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Como Lido com Erros</h3>
+                    <div class="card-content">
+                        <p>
+                            No começo, cada erro no console me desesperava. Hoje, vejo erros como mensagens 
+                            que o código está me mandando, me guiando para a solução. Aprendi a ler mensagens 
+                            de erro, usar o console.log estrategicamente e pesquisar de forma eficiente.
+                        </p>
+                        <p>
+                            Desenvolvi paciência e método: identificar o problema, isolar o código, testar 
+                            hipóteses e, quando necessário, pedir ajuda sem medo.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>O Que Mudou na Minha Visão Sobre Tecnologia</h3>
+                    <div class="card-content">
+                        <p>
+                            Antes, eu usava sites e aplicativos sem pensar em como eles funcionavam. Agora, 
+                            olho para qualquer interface e penso: "Como será que fizeram isso? Quais tecnologias 
+                            usaram? Como é o código por trás?"
+                        </p>
+                        <p>
+                            Entendi que tecnologia não é mágica - são pessoas escrevendo código, linha por linha, 
+                            resolvendo problemas. E agora eu faço parte desse mundo. Essa consciência é 
+                            empoderadora.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card card-highlight">
+                    <h3>Próximos Passos</h3>
+                    <div class="card-content">
+                        <p>Esta disciplina foi apenas o começo. Agora quero:</p>
+                        <ul>
+                            <li>Aprofundar meus conhecimentos em JavaScript e aprender sobre frameworks modernos</li>
+                            <li>Criar projetos autorais que resolvam problemas reais</li>
+                            <li>Continuar estudando design para criar interfaces ainda mais bonitas e intuitivas</li>
+                            <li>Explorar back-end e bancos de dados para criar aplicações completas</li>
+                            <li>Manter este portfólio sempre atualizado com meus novos projetos</li>
+                            <li>Contribuir com a comunidade de desenvolvedores, assim como fui ajudada</li>
+                        </ul>
+                        <p class="highlight-text">
+                            A jornada está só começando, e estou empolgada com tudo que ainda vou aprender e criar!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Vamos Conversar?</h2>
+            <p>
+                Se você quer saber mais sobre minha jornada, trocar ideias sobre programação, 
+                ou apenas bater um papo sobre tecnologia, eu adoraria conversar com você!
+            </p>
+            <div class="cta-buttons">
+                <a href="mailto:seuemail@exemplo.com" class="btn btn-primary btn-lg">Entre em Contato</a>
+                <a href="#hero" class="btn btn-secondary btn-lg">Voltar ao Topo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Feito com 💖 e muito JavaScript • Programação e Plataformas © 2025</p>
+    </footer>
+
+    <!-- Botão Scroll to Top -->
+    <button id="scroll-top" class="scroll-top" aria-label="Voltar ao topo">↑</button>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
