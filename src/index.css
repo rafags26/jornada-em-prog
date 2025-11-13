@@ -8,79 +8,79 @@
 
 @layer base {
   :root {
-    --background: 220 25% 98%;
-    --foreground: 220 20% 15%;
+    --background: 330 40% 98%;
+    --foreground: 270 20% 20%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 20% 15%;
+    --card-foreground: 270 20% 20%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 20% 15%;
+    --popover-foreground: 270 20% 20%;
 
-    /* Coral/Rosa vibrante como primary */
-    --primary: 6 78% 65%;
+    /* Rosa suave como primary */
+    --primary: 330 70% 65%;
     --primary-foreground: 0 0% 100%;
     
-    /* Turquesa/Teal como secondary */
-    --secondary: 174 62% 59%;
-    --secondary-foreground: 0 0% 100%;
+    /* Roxo claro/lavanda como secondary */
+    --secondary: 270 60% 75%;
+    --secondary-foreground: 270 30% 25%;
 
-    --muted: 220 20% 95%;
-    --muted-foreground: 220 15% 45%;
+    --muted: 330 30% 96%;
+    --muted-foreground: 270 15% 50%;
 
-    --accent: 174 62% 59%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 270 60% 75%;
+    --accent-foreground: 270 30% 25%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 20% 90%;
-    --input: 220 20% 90%;
-    --ring: 6 78% 65%;
+    --border: 330 25% 92%;
+    --input: 330 25% 92%;
+    --ring: 330 70% 65%;
 
     --radius: 0.75rem;
     
-    /* Custom tokens */
-    --gradient-hero: linear-gradient(135deg, hsl(6 78% 65% / 0.9), hsl(174 62% 59% / 0.9));
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100% / 0.8), hsl(220 25% 98% / 0.8));
-    --shadow-card: 0 8px 24px -8px hsl(220 20% 15% / 0.12);
-    --shadow-card-hover: 0 12px 32px -8px hsl(220 20% 15% / 0.18);
+    /* Custom tokens - gradiente rosa e roxo */
+    --gradient-hero: linear-gradient(135deg, hsl(330 70% 65% / 0.9), hsl(270 60% 75% / 0.9));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100% / 0.8), hsl(330 40% 98% / 0.8));
+    --shadow-card: 0 8px 24px -8px hsl(330 70% 65% / 0.15);
+    --shadow-card-hover: 0 12px 32px -8px hsl(330 70% 65% / 0.22);
   }
 
   .dark {
-    --background: 220 30% 8%;
-    --foreground: 220 20% 95%;
+    --background: 270 30% 12%;
+    --foreground: 330 25% 95%;
 
-    --card: 220 25% 12%;
-    --card-foreground: 220 20% 95%;
+    --card: 270 25% 16%;
+    --card-foreground: 330 25% 95%;
 
-    --popover: 220 25% 12%;
-    --popover-foreground: 220 20% 95%;
+    --popover: 270 25% 16%;
+    --popover-foreground: 330 25% 95%;
 
-    --primary: 6 78% 65%;
+    --primary: 330 70% 65%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 174 62% 59%;
+    --secondary: 270 50% 60%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 220 25% 18%;
-    --muted-foreground: 220 15% 65%;
+    --muted: 270 25% 22%;
+    --muted-foreground: 270 15% 70%;
 
-    --accent: 174 62% 59%;
+    --accent: 270 50% 60%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 25% 20%;
-    --input: 220 25% 20%;
-    --ring: 6 78% 65%;
+    --border: 270 25% 24%;
+    --input: 270 25% 24%;
+    --ring: 330 70% 65%;
     
-    /* Custom tokens dark */
-    --gradient-hero: linear-gradient(135deg, hsl(6 78% 55% / 0.85), hsl(174 62% 49% / 0.85));
-    --gradient-card: linear-gradient(145deg, hsl(220 25% 14% / 0.8), hsl(220 25% 10% / 0.8));
+    /* Custom tokens dark - gradiente rosa e roxo */
+    --gradient-hero: linear-gradient(135deg, hsl(330 70% 55% / 0.85), hsl(270 60% 65% / 0.85));
+    --gradient-card: linear-gradient(145deg, hsl(270 25% 18% / 0.8), hsl(270 25% 14% / 0.8));
     --shadow-card: 0 8px 24px -8px hsl(0 0% 0% / 0.3);
-    --shadow-card-hover: 0 12px 32px -8px hsl(0 0% 0% / 0.4);
+    --shadow-card-hover: 0 12px 32px -8px hsl(330 70% 65% / 0.25);
   }
 }
 
